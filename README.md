@@ -14,7 +14,7 @@ Nirvana Runner is a project developed for the Virtual and Augmented Reality cour
 - C#
 
 ## Team
-[Eliéser Santos](https://github.com/kalebeccs)
-[Guilherme Louro](https://github.com/GuilhermeLouro)
-[Miguel Lobato](https://github.com/miguellobato96)
-[Rafael de Gusmão](https://github.com/Rafdegus)
+- [Eliéser Santos](https://github.com/kalebeccs)
+- [Guilherme Louro](https://github.com/GuilhermeLouro)
+- [Miguel Lobato](https://github.com/miguellobato96)
+- [Rafael de Gusmão](https://github.com/Rafdegus)
