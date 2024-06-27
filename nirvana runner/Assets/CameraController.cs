@@ -5,18 +5,18 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public float shakeDistance = 0.1f;
-    public float shakeSpeed = 1;
+    public float shakeDistance = 0.1f; // Shaking along the y-axis
+    public float shakeSpeed = 1; // How fast the shake motion will be 
 
-    Vector3 initialPosition;
-    Vector3 shakeOffset;
+    Vector3 initialPosition; // Initial Camera Position
+    Vector3 shakeOffset; // Camera Position after the shake
 
     bool isShaking = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialPosition = transform.position;
+        initialPosition = transform.position; // Save the starting position
     }
 
     // Update is called once per frame
@@ -31,17 +31,17 @@ public class CameraController : MonoBehaviour
             {
                 if (currentDistance > shakeDistance)
                 {
-                    shakeSpeed *= -1;
+                    shakeSpeed *= -1; // Reverse direction if moved too far up
                 }
             }
             else
             {
                 if (currentDistance < -shakeDistance)
                 {
-                    shakeSpeed *= -1;
+                    shakeSpeed *= -1; // Reverse direction if moved too far down
                 }
             }
-            shakeOffset.y += shakeSpeed * Time.deltaTime;
+            shakeOffset.y += shakeSpeed * Time.deltaTime; // Apply shake movement     
             if (shakeOffset.y > shakeDistance) shakeOffset.y = shakeDistance;
             if (shakeOffset.y < -shakeDistance) shakeOffset.y = -shakeDistance;
             transform.position = initialPosition + shakeOffset;
@@ -56,6 +56,6 @@ public class CameraController : MonoBehaviour
     public void StopShaking()
     {
         isShaking = false;
-        transform.position = initialPosition;
+        transform.position = initialPosition; // Reset camera to starting position
     }
 }
