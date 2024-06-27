@@ -21,4 +21,9 @@ public class UIControllerTitle : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void quit()
+    {
+        Application.Quit();
+    }
 }
